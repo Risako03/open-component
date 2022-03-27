@@ -1,0 +1,173 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700");
+@import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
+
+
+/* Components */
+/* @import url("components/name_of_component.css"); */
+
+
+body {
+  background-image: url("../images/orangewood.jpg");
+  background-size: cover;
+  background-color:rgba(255,255,255,0.3);
+  background-blend-mode:lighten;
+  background-repeat: no-repeat;
+  margin: 30px;
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+}
+
+.cards {
+  background-color: white;
+  max-width: 640px;
+  margin: 0px auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.text-center {
+  text-align: center;
+}
+.container {
+  margin: 0px auto;
+  background-color: white;
+}
+
+.container.top{
+  padding: 20px;
+  max-width: 640px;
+  height: 300px;
+  display: flex;
+}
+
+.container img{
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.card-content{
+  height: 300px;
+  width: 300px;
+  background-color: white;
+}
+
+.rating{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.rating input {
+  visibility: hidden;
+  margin-right: 1em;
+  font-size: 20px;
+  text-shadow: 0.5px 0.5px 3px burlywood;
+}
+
+.rating input::before {
+  justify-content: center;
+  cursor: pointer;
+  visibility: visible;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f005';
+  font-weight: 900;
+  color: brown;
+  transition: color 0.35s;
+}
+
+.rating input:hover {
+  transform: scale(1.2) translate(-10%, -10%);
+}
+
+.rating input:checked ~ input::before {
+  color: #fff;
+}
+
+.card-content p {
+  text-align: center;
+}
+
+.btn-flat {
+  margin: 30px;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: rgb(255, 94, 0);
+  transition: background 0.3s ease;
+  display: flex;
+  text-decoration:none;
+  justify-content: center;
+}
+
+.btn-flat:hover {
+  background: rgb(253, 207, 1);
+  color: white;
+}
+
+.container.middle{
+  max-width: 600px;
+  height: 300px;
+  background-color: white;
+}
+
+.container.bottom {
+  padding: 20px;
+  max-width: 640px;
+}
+
+.card-trip {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  align-items: center;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
